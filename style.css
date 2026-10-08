@@ -290,3 +290,30 @@ footer {
     scroll-behavior: auto;
   }
 }
+
+.slot:has(img + img) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.grid > .slot:has(img + img) {
+  grid-column: 1 / -1;
+}
+
+.slot:has(img + img) img {
+  border-radius: 8px;
+}
+
+.slot:has(img + img) figcaption {
+  position: static;
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+@media (max-width: 480px) {
+  .slot:has(img + img) {
+    grid-template-columns: 1fr;
+  }
+}
