@@ -298,7 +298,8 @@ footer {
   padding: 0.5rem;
 }
 
-.grid > .slot:has(img + img) {
+.grid > .slot:has(img + img),
+.grid > .slot:has(img + img) ~ div {
   grid-column: 1 / -1;
 }
 
